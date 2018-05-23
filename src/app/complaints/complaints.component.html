@@ -1,0 +1,47 @@
+<div class="card">
+  <div class="card-header">
+          Complaints form
+        </div>
+        <div class="card-body">
+
+<div class="container">
+  <form #f="ngForm" (submit)="addComplaints(f)"> 
+    <div class="form-group row">
+      <label for="example-text-input1">Village</label>
+      <input type="text" class="form-control" [(ngModel)]="village" name="village" id="example-text-input1" aria-describedby="villageHelp" placeholder="Enter your village" required>
+    </div>
+    <div class="form-group row">
+      <label for="example-text-input2">Mandal</label>
+      <input type="text" class="form-control" [(ngModel)]="mandal" name="mandal" id="example-text-input2" placeholder="Enter your Mandal" required>
+    </div>
+    <div class="form-group row">
+      <label for="example-text-input3">District</label>
+      <input type="text" class="form-control" [(ngModel)]="district" name="district" id="example-text-input3" placeholder="Enter your district" required>
+    </div>
+    <div class="form-group row">
+      <label for="example-number-input">Postal code</label>
+      <input type="number" class="form-control" [(ngModel)]="postalcode" name="postalcode" id="example-number-input" placeholder="Enter your Postal code" required>
+    </div>
+    <!-- <div class="form-group row">
+      <label for="example-file-input">Upload image</label>
+      <input type="file" class="form-control" [(ngModel)]="file" name="file" id="example-file-input" required>
+    </div> 
+    <div class="form-group row">
+      <label for="complaintDescription">Date</label>
+      <input type="date" class="form-control" name="date" [(ngModel)]="date" id="example-date-input" required>
+    </div> -->
+    
+    <div class="form-group row">
+      <label for="complaintDescription">Description</label>
+      <textarea class="form-control" [(ngModel)]="description" name="description" id="complaintDescription" rows="3" required></textarea>
+    </div>
+  <!-- <div class="form-group row">
+      <label for="exampleInputFile">File input</label>
+      <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+    </div> -->
+    
+   <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>
+</div>

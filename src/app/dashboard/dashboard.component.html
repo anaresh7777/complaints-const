@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>Welcome to Dashboard</h1>
+  </div>
+
+  <div class="card" *ngFor = 'let complaint of complaints'>
+        <div class="card-header">
+          {{complaint.date | date : "dd.MM.y"}}
+              </div>
+              <div class="card-body">
+    <form >
+      <div class="col-md-3">
+        Village: {{complaint.village}}
+      </div>
+      <div class="col-md-3">
+          Mandal: {{complaint.mandal}}
+      </div>
+      <div class="col-md-3">
+        District: {{complaint.district}}
+      </div>
+      <div class="col-md-3">
+        Postal code: {{complaint.postalcode}}
+      </div>
+    <!-- <div class="col-md-3">
+        Image: {{complaint.file}}
+      </div> -->
+      <div class="col-md-12">
+        Description: {{complaint.description}}
+      </div>
+    </form>
+</div>
+  </div>
