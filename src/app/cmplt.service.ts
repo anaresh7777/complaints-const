@@ -14,7 +14,7 @@ export class CmpltService {
     getComplaints()
      {
       return this.http.get('http://localhost:3000/api/complaints')
-      .pipe(map(res => res.json()));
+      .pipe(map(res  => res.json()));
   }
 
    // add complaints
