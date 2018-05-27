@@ -27,7 +27,7 @@ export class CmpltService {
 }
 
 // delete complaints
-deleteComplaints(id){
+deleteComplaint(id){
   return this.http.delete("http://localhost:3000/api/complaints"+id)
       .pipe(map(res => res.json()));
 }

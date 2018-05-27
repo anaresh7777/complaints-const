@@ -22,9 +22,18 @@ export class DashboardComponent implements OnInit {
   constructor(private cmpltService: CmpltService) { }
 
   ngOnInit() {
-
-    this.cmpltService.getComplaints()
-    .subscribe(Complaints => this.complaints = Complaints);
+    this.getComplaints();
+  }
+  //complaints:Complaint;
+  getComplaints(){
+  this.cmpltService.getComplaints()
+    .subscribe(complaints => { this.complaints = complaints });
+  }
+  deleteComplaint(id){
+    this.cmpltService.deleteComplaint(id)
+      .subscribe(()=>{
+        this.getComplaints();
+      });
   }
 
 }

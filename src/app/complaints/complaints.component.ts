@@ -24,7 +24,7 @@ export class ComplaintsComponent implements OnInit {
   description: string;
 
 
-  constructor(private cmpltService: CmpltService) {}
+  constructor(private cmpltService: CmpltService, route:ActivatedRoute, public router:Router) {}
   
 
   ngOnInit() {}
@@ -41,12 +41,15 @@ export class ComplaintsComponent implements OnInit {
       description: this.description
     }
     this.cmpltService.addComplaints(newComplaint)
-    .subscribe(Complaint => { 
+    .subscribe(() => this.goBack()
+    /* { Complaint => 
       this.complaints.push(Complaint);
-      //f.resetForm();
-  });
-  
-}
+  } */
+);
 
+}
+goBack(){
+  this.router.navigate(['/home'])
+}
 
 }

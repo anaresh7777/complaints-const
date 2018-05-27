@@ -5,6 +5,7 @@
   <div class="card" *ngFor = 'let complaint of complaints'>
         <div class="card-header">
           {{complaint.date | date : "dd.MM.y"}}
+          <a class="btn btn-danger" (click)="deleteComplaint(complaint._id)" style="float: right;">Delete</a>
               </div>
               <div class="card-body">
     <form >

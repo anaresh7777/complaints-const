@@ -6,20 +6,16 @@ var mongoose = require('mongoose');
 
 var complaintSchema = mongoose.Schema({
     village: {
-        type: String,
-        required: true
+        type: String
     },
     mandal: {
-        type: String,
-        required: true
+        type: String
     },
     district: {
-        type: String,
-        required: true
+        type: String
     },
     postalcode: {
-        type: String,
-        required: true
+        type: String
     },
     date: { 
         type: Date, 
@@ -31,8 +27,7 @@ var complaintSchema = mongoose.Schema({
         default: Date.now
       },
     description: {
-        type: String,
-        required: true
+        type: String
     } 
 });
 

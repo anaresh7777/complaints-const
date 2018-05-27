@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ApplicationRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { AgmCoreModule } from '@agm/core';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -26,9 +28,14 @@ import { CmpltService } from './cmplt.service';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: '',
+      libraries: ["places"]
+    })
   ],
   providers: [CmpltService],
   bootstrap: [AppComponent]
