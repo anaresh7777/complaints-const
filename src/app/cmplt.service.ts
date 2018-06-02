@@ -25,10 +25,16 @@ export class CmpltService {
     return this.http.post('http://localhost:3000/api/complaints', info)
     .pipe(map(res => res.json()));
 }
+/*
+//get single complaint
+getComplaint(id){
+  return this.http.get("http://localhost:3000/api/employees/"+id)
+      .pipe(map(res => res.json()));
+} */
 
 // delete complaints
 deleteComplaint(id){
-  return this.http.delete("http://localhost:3000/api/complaints"+id)
+  return this.http.delete("http://localhost:3000/api/complaints/"+id)
       .pipe(map(res => res.json()));
 }
 

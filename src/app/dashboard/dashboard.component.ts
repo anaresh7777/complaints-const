@@ -27,13 +27,17 @@ export class DashboardComponent implements OnInit {
   //complaints:Complaint;
   getComplaints(){
   this.cmpltService.getComplaints()
-    .subscribe(complaints => { this.complaints = complaints });
+    .subscribe(complaints => { this.complaints = complaints; 
+    })
   }
   deleteComplaint(id){
     this.cmpltService.deleteComplaint(id)
       .subscribe(()=>{
         this.getComplaints();
       });
+  }
+  complaintSolved(){
+  console.log("Solved!");
   }
 
 }

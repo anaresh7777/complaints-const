@@ -6,6 +6,7 @@
         <div class="card-header">
           {{complaint.date | date : "dd.MM.y"}}
           <a class="btn btn-danger" (click)="deleteComplaint(complaint._id)" style="float: right;">Delete</a>
+          <a class="btn btn-info" (click)="complaintSolved()" style="float: right;">Solved?</a>
               </div>
               <div class="card-body">
     <form >
